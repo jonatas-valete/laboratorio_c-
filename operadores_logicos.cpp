@@ -2,33 +2,55 @@
 
 using namespace std;
 
-// Operadores Lógicos: E: &&, ou:||, Não: !
-/* As condições devem ser feitas dentro do parentese de cada if por exemplo. */
-
-void is_chevrolet(string carro, string cor){
-         if (carro == "chevrolet" && cor == "preto" || cor == "branco"){
-             cout << "Valor R$ 120.000,00" << endl;
-         }
+void multiplicacao(float a, float b){
+    float resultado=a*b;
+    cout << resultado << endl;   
 }
 
-void is_mercedes(string carro, string cor){
-         if (carro == "mercedes" && cor == "preto" || cor == "branco"){
-             cout << "Valor R$ 300.000,00" << endl;
-         }   
+void divisao(float a=0, float b=0){
+    float resultado=a/b;
+    cout << resultado << endl;
 }
 
+void soma(float a=0, float b=0){
+    float resultado=a+b;
+    cout << resultado << endl;
+}
 
+void subtracao(float a=0, float b=0){
+    float resultado=0;
+    if (a > b){
+        resultado=a-b;
+    }else{
+        resultado=b-a;
+    }
+    cout << resultado << endl;
+} 
 
 int main(){
-    string carro, cor;
-
-    cout << "digite a marca do carro: " << endl;
-    cin >> carro;
-
-    cout << "digite a cor do carro: " << endl;
-    cin >> cor;
-
-    is_chevrolet(carro, cor);
-    is_mercedes(carro, cor);
+    
+    float a, b;
+    char operador;
+    cout << "entre com uma operação: \n" << endl;
+    cin >> operador;
+    if (operador == '*'){
+       cin >> a;
+       cin >> b; 
+       multiplicacao(a, b);
+    }else if (operador == '/'){
+        cin >> a;
+        cin >> b;
+        divisao(a, b);
+    }else if (operador == '+'){
+        cin >> a;
+        cin >> b;
+        soma(a, b);
+    }else if (operador == '-'){
+        cin >> a;
+        cin >> b;
+        subtracao(a, b);
+    }else{
+        cout << "Operação não existente. tente novamente." << endl;
     return 0;
+    }
 }
