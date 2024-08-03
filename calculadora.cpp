@@ -10,24 +10,22 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 using namespace std;
 
-int multiplicacao(float a, float b){
+void multiplicacao(float a, float b){
     float resultado=a*b;
-    cout << resultado << endl;
-    return 0;
+    cout << resultado << endl;   
 }
 
-int divisao(float a=0, float b=0){
+void divisao(float a=0, float b=0){
     float resultado=a/b;
     cout << resultado << endl;
 }
 
-int soma(float a=0, float b=0){
+void soma(float a=0, float b=0){
     float resultado=a+b;
     cout << resultado << endl;
-    return 0;
 }
 
-int subtracao(float a=0, float b=0){
+void subtracao(float a=0, float b=0){
     float resultado=0;
     if (a > b){
         resultado=a-b;
@@ -35,8 +33,6 @@ int subtracao(float a=0, float b=0){
         resultado=b-a;
     }
     cout << resultado << endl;
-    return 0;
-    
 } 
 
 int main(){
@@ -61,6 +57,7 @@ int main(){
         cin >> a;
         cin >> b;
         subtracao(a, b);
-    }
+    }else{
+        cout << "Operação não existente. tente novamente.
     return 0;
 }
