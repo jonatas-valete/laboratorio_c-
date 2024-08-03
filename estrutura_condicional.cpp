@@ -2,22 +2,22 @@
 
 using namespace std;
 
-int estcond(float valor=0){
-    if (valor < 2000){
-        cout << "salario baixo" << endl;
-    } else if (valor < 3000){
-        cout << "salario médio" << endl;
-    } else if (valor > 5000){
-        cout << "salario bom" << endl;
-    }
-    return 0;
-}
+// Operadores Lógicos: E: &&, ou:||, Não: !
+/* As condições devem ser feitas dentro do parentese de cada if por exemplo. */
 
 int main(){
-    float valor=0;
-    cout << "digite um valor\n";
-    cin >> valor;
-    estcond(valor);
+    string carro, cor;
+
+    cout << "digite a marca do carro: " << endl;
+    cin >> carro;
+
+    cout << "digite a cor do carro: " << endl;
+    cin >> cor;
+
+    if (carro == "chevrolet" && cor == "preto"){
+        cout << "Valor R$ 120.000,00" << endl;
+    } else{
+         cout << "carro nao encontrado\n";
+    }
     return 0;
-    
 }
