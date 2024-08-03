@@ -1,56 +1,26 @@
-#include <iostream>
-
+#include <iostream> 
 using namespace std;
 
-void multiplicacao(float a, float b){
-    float resultado=a*b;
-    cout << resultado << endl;   
-}
-
-void divisao(float a=0, float b=0){
-    float resultado=a/b;
-    cout << resultado << endl;
-}
-
-void soma(float a=0, float b=0){
-    float resultado=a+b;
-    cout << resultado << endl;
-}
-
-void subtracao(float a=0, float b=0){
-    float resultado=0;
-    if (a > b){
-        resultado=a-b;
-    }else{
-        resultado=b-a;
+void is_chevrolet(string carro, string cor){
+    if (carro == "chevrolet" && cor == "preto" || carro == "chevrolet" && cor == "branco"){
+        cout << "R$ 120.000,00";
     }
-    cout << resultado << endl;
-} 
+}
+
+void is_mercedes(string carro, string cor){
+    if (carro == "mercedes" && cor == "preto" || carro == "mercedes" && cor == "branco"){
+        cout << "R$ 350.000,00";
+    }
+}
+
 
 int main(){
-    
-    float a, b;
-    char operador;
-    cout << "entre com uma operação: \n" << endl;
-    cin >> operador;
-    if (operador == '*'){
-       cin >> a;
-       cin >> b; 
-       multiplicacao(a, b);
-    }else if (operador == '/'){
-        cin >> a;
-        cin >> b;
-        divisao(a, b);
-    }else if (operador == '+'){
-        cin >> a;
-        cin >> b;
-        soma(a, b);
-    }else if (operador == '-'){
-        cin >> a;
-        cin >> b;
-        subtracao(a, b);
-    }else{
-        cout << "Operação não existente. tente novamente." << endl;
-    return 0;
-    }
+    string marca_carro, cor;
+    cout << "digite a marca do carro desejado: " << endl;
+    cin >> marca_carro;
+    cout << "digite a cor do carro desejado: ";
+    cin >> cor;
+
+    is_chevrolet(marca_carro, cor);
+    is_mercedes(marca_carro, cor);
 }
