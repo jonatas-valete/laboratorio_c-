@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void dowhile_func(int tam){
+void for_func(int tam){
     // calcular fatorial
     int soma=0;
     for (int j=1; j<=tam; j+=1){
