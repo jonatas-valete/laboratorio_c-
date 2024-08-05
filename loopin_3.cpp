@@ -17,6 +17,6 @@ int main(){
     cout << "digite um numero inteiro: ";
     cin >> tam;
     
-    dowhile_func(tam);
+    for_func(tam);
     return 0;
 }
