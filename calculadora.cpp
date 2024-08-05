@@ -4,17 +4,17 @@ using namespace std;
 
 void multiplicacao(float a, float b){
     float resultado=a*b;
-    cout << resultado << endl;   
+    cout << "Resultado: " << resultado << endl;   
 }
 
 void divisao(float a=0, float b=0){
     float resultado=a/b;
-    cout << resultado << endl;
+    cout << "Resultado: " << resultado << endl;
 }
 
 void soma(float a=0, float b=0){
     float resultado=a+b;
-    cout << resultado << endl;
+    cout << "Resultado: " << resultado << endl;
 }
 
 void subtracao(float a=0, float b=0){
@@ -24,28 +24,37 @@ void subtracao(float a=0, float b=0){
     }else{
         resultado=b-a;
     }
-    cout << resultado << endl;
-} 
+    cout << "Resultado: " << resultado << endl;
+}
+
 
 int main(){
     float a, b;
     char operador;
-    cout << "entre com uma operação: \n" << endl;
+    cout << "entre com uma operação: ";
     cin >> operador;
     if (operador == '*'){
+       cout << "digite o primeiro valor: ";
        cin >> a;
+       cout << "digite o segundo valor: ";
        cin >> b; 
        multiplicacao(a, b);
     }else if (operador == '/'){
+        cout << "digite o primeiro valor: ";
         cin >> a;
+        cout << "digite o segundo valor: ";
         cin >> b;
         divisao(a, b);
     }else if (operador == '+'){
+        cout << "digite o primeiro valor: ";
         cin >> a;
+        cout << "digite o segundo valor: ";
         cin >> b;
         soma(a, b);
     }else if (operador == '-'){
+        cout << "digite o primeiro valor: ";
         cin >> a;
+        cout << "digite o segundo valor: ";
         cin >> b;
         subtracao(a, b);
     }else{
@@ -53,4 +62,3 @@ int main(){
     return 0;
     }
 }
-

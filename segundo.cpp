@@ -30,7 +30,7 @@ int main(){
     int idade;
     cout << "digite sua idade: ";
     cin >> idade;
-    cout << idade << endl;
+    cout << "Você digitou " << idade << endl;
     
     return 0;
 }
